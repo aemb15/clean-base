@@ -1,7 +1,7 @@
 package curso.exception;
 
 public class CursoNivelNoValidaException extends RuntimeException {
-    public CursoNivelNoValidaException(String elNivelEsInvalido) {
-        super(elNivelEsInvalido);
+    public CursoNivelNoValidaException(String message) {
+        super(message);
     }
 }
