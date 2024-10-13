@@ -23,7 +23,8 @@ public class RegistrarCursoUseCase implements RegistrarCursoInput {
     public UUID registrarCurso(String nombre, LocalDate fecha, Nivel nivel) {
         if(registrarCursoOutput.existeCurso(nombre))
             throw new ExisteCursoException("El curso ya existe");
-        return registrarCursoOutput.registrarCurso(nombre, fecha, nivel);
+        Curso curso = Curso.instanciaCurso(null,nombre,fecha,nivel);
+        return registrarCursoOutput.registrarCurso(curso);
     }
 
 }
