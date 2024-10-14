@@ -46,4 +46,8 @@ public class Curso {
     public Nivel getNivel() {
         return nivel;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> develop
