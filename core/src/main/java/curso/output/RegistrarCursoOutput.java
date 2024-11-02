@@ -5,6 +5,6 @@ import java.util.UUID;
 
 public interface RegistrarCursoOutput {
 
-    UUID registrarCurso(Curso curso);
+    UUID registrarCurso(Curso curso) ;
     boolean existeCurso(String nombre);
 }

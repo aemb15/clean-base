@@ -38,7 +38,8 @@ public class RegistrarCursoUseCaseTest {
     public void testRegistrarCurso() {
         Curso curso = Curso.instanciaCurso(null,"matematica", LocalDate.MAX, Nivel.MEDIO);
         when(registrarCursoOutput.existeCurso("matematica")).thenReturn(false);
-        when(registrarCursoOutput.registrarCurso("matematica", LocalDate.MAX, Nivel.MEDIO)).thenReturn(uuid);
+        //when(registrarCursoOutput.registrarCurso("matematica", LocalDate.MAX, Nivel.MEDIO)).thenReturn(uuid);
+        when(registrarCursoOutput.registrarCurso(any(Curso.class))).thenReturn(uuid);
         UUID cursoRecibido = registrarCursoInput.registrarCurso("matematica", LocalDate.MAX, Nivel.MEDIO);
         Assertions.assertEquals(uuid,cursoRecibido);
     }
@@ -56,7 +57,8 @@ public class RegistrarCursoUseCaseTest {
         when(registrarCursoOutput.existeCurso("fisica")).thenReturn(false);
         UUID cursoRecibido = registrarCursoInput.registrarCurso("fisica", LocalDate.MAX, Nivel.MEDIO);
         assertNull(cursoRecibido);
-        verify(registrarCursoOutput,times(1)).registrarCurso("fisica",LocalDate.MAX, Nivel.MEDIO);
+        //verify(registrarCursoOutput,times(1)).registrarCurso("fisica",LocalDate.MAX, Nivel.MEDIO);
+        verify(registrarCursoOutput,times(1)).registrarCurso(any(Curso.class));
 
 
     }

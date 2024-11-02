@@ -20,7 +20,7 @@ public class RegistrarCursoUseCase implements RegistrarCursoInput {
     }
 
     @Override
-    public UUID registrarCurso(String nombre, LocalDate fecha, Nivel nivel) {
+    public UUID registrarCurso(String nombre, LocalDate fecha, Nivel nivel){
         if(registrarCursoOutput.existeCurso(nombre))
             throw new ExisteCursoException("El curso ya existe");
         Curso curso = Curso.instanciaCurso(null,nombre,fecha,nivel);
