@@ -7,4 +7,6 @@ import java.util.ArrayList;
 public interface BuscarCursoOutput {
 
     ArrayList<Curso> consultar();
+
 }
+

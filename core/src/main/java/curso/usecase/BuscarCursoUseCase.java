@@ -18,4 +18,6 @@ public class BuscarCursoUseCase implements BuscarCursoInput {
     public ArrayList<Curso> buscar() {
         return buscarCursoOutput.consultar();
     }
+
 }
+
