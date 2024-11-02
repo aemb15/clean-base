@@ -52,7 +52,7 @@ public class CursoDato {
         return new CursoDato(curso.getId(), curso.getNombre(),curso.getFecha(),curso.getNivel());
     }
 
-    public Curso fromDomainn(){
-        return Curso.instanciaCurso(null,this.nombre,this.fecha,this.nivel);
+    public Curso fromDomain(){
+        return Curso.instanciaCurso(this.id,this.nombre,this.fecha,this.nivel);
     }
 }

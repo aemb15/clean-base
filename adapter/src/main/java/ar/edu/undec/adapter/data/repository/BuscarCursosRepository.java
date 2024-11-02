@@ -23,6 +23,6 @@ public class BuscarCursosRepository implements BuscarCursoOutput {
     @Override
     public ArrayList<Curso> consultar() {
         return buscarCursosCRUD.findAll().stream()
-                .map(CursoDato::fromDomainn).collect(Collectors.toCollection(ArrayList::new));
+                .map(CursoDato::fromDomain).collect(Collectors.toCollection(ArrayList::new));
     }
 }
