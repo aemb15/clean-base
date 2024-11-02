@@ -51,4 +51,8 @@ public class CursoDato {
     public static CursoDato fromDomain(Curso curso){
         return new CursoDato(curso.getId(), curso.getNombre(),curso.getFecha(),curso.getNivel());
     }
+
+    public Curso fromDomainn(){
+        return Curso.instanciaCurso(null,this.nombre,this.fecha,this.nivel);
+    }
 }
